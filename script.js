@@ -1,9 +1,8 @@
 async function submition() {
   let result
-  let chatlog = []
   document.getElementById('loading').style.display = 'flex'
   let transcript = document.getElementById('usertext').value
-  chatlog.push("User:",usertext )
+
   try {
     const response = await fetch("/api/chat", { 
       method: "POST",
@@ -15,7 +14,7 @@ async function submition() {
         messages: [
           {
             role: "user",
-            content: `Build a professional website based on ${usertext}. Make it as professional and nice looking. Give only the code as your response nothing else. Make there a thing banner that is the accent colour of the website you make that says Made in Forma. Rid the site of bugs and clutter ness. The site must look very human as well. The site must be beautiful as well. Use ${chatlog} as the chat history so it can be a live conversation. Also add a comment in the beginning, "Made in Forma"`,
+            content: `Build a professional website based on ${usertext}. Make it as professional and nice looking. Give only the code as your response nothing else. Make there a thing banner that is the accent colour of the website you make that says Made in Forma. Rid the site of bugs and clutter ness. The site must look very human as well. The site must be beautiful as well. Also add a comment in the beginning of the code, "Made in Forma"`,
           },
           {
             role: "user",
@@ -39,13 +38,13 @@ async function submition() {
         data.choices[0].text?.content ||
         "Sorry, the website isn't working right now."
       result = reply
-      chatlog.push("AI:",reply )
       console.log(result)
     } else {
       console.error("Unexpected response format:", data)
     }
   } catch (err) {
     console.error("Error during fetch:", err)
+    console.log(err)
   }
 }
 
