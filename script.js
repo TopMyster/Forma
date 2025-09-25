@@ -14,7 +14,7 @@ async function submition() {
         messages: [
           {
             role: "user",
-            content: `Build a professional website based on ${usertext}. Make it as professional and nice looking. Give only the code as your response nothing else. Make there a thing banner that is the accent colour of the website you make that says Made in Forma. Rid the site of bugs and clutter ness. The site must look very human as well. The site must be beautiful as well. Also add a comment in the beginning of the code, "Made in Forma"`,
+            content: `Build a professional website based on ${transcript}. Make it as professional and nice looking. Give only the code as your response nothing else. Make there a thing banner that is the accent colour of the website you make that says Made in Forma. Rid the site of bugs and clutter ness. The site must look very human as well. The site must be beautiful as well. Also add a comment in the beginning of the code, "Made in Forma"`,
           },
           {
             role: "user",
@@ -22,7 +22,7 @@ async function submition() {
           }
         ],
         temperature: 1,
-        max_tokens: 200,
+        max_tokens: 1000,
         top_p: 1,
         stream: false
       }),
