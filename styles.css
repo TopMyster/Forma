@@ -101,7 +101,6 @@ button {
     height: 100vh;
     backdrop-filter: blur(30px);
     z-index: 1000;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
 }
@@ -111,4 +110,25 @@ button {
     top: 40%;
     transform: translateY(-50%);
     font-size: 50px;
+}
+
+#result {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result .text {
+    font-size: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
