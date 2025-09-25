@@ -1,0 +1,25 @@
+body {
+    background-color: #FBFAF4;
+    font-family: "Instrument Serif", serif;
+}
+
+#logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: .2;
+    top: 35px;
+
+}
+
+#gradient {
+    width: 200px;
+    height: 150px;
+    border-radius: 170px;
+    background-color: #C8A6F1;
+    filter: blur(40px);
+    position: absolute;
+    top: 25px;
+    z-index: -1;
+}
