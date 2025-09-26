@@ -21,7 +21,7 @@ async function submition() {
             content: transcript
           }
         ],
-        temperature: 1,
+        temperature: 1.1,
         max_tokens: 4000,
         top_p: 1,
         stream: false
