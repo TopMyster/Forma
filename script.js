@@ -22,7 +22,7 @@ async function submition() {
           }
         ],
         temperature: 1,
-        max_tokens: 1000,
+        max_tokens: 4000,
         top_p: 1,
         stream: false
       }),
