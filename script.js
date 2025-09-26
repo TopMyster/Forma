@@ -39,6 +39,10 @@ async function submition() {
         "Sorry, the website isn't working right now."
       result = reply
       console.log(result)
+      const doc = document.getElementById('preview').contentWindow.document;
+      doc.open();
+      doc.write(reply);
+      doc.close();
     } else {
       console.error("Unexpected response format:", data)
     }
