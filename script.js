@@ -52,3 +52,6 @@ async function submition() {
   }
 }
 
+function newChat() {
+  document.getElementById('result').style.display = 'none'
+}
