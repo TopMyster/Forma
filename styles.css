@@ -132,3 +132,15 @@ button {
     flex-direction: column;
     align-items: center;
 }
+
+#preview {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 40vw;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 2px 2px 100px #b578fa46;
+}
