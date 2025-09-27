@@ -183,3 +183,7 @@ button {
         scale: 1;
     }
 }
+
+#usertext::placeholder {
+    color: rgba(0, 0, 0, 0.812);
+}
