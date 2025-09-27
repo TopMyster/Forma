@@ -50,7 +50,7 @@ async function submition() {
       a.onclick = function() {
         Object.assign(this, {
           href,
-          download: "website.html"
+          download: "index.html"
         })
       }
     } else {
