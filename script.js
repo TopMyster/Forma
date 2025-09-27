@@ -35,6 +35,7 @@ Output rules:
  • Validate with semantic landmarks (header, main, section, footer), ARIA where needed, alt text on images, keyboard focus states.
  • Keep the design elegant, modern, and creative while maintaining polish.
  • Double check website has everything and is working. Make sure paddings, gaps, and margins are good and sizes of buttons, inputs, and text.
+ • Keep sites looking clean and professional
  `
 
   try {
