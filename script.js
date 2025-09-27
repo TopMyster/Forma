@@ -44,10 +44,10 @@ async function submition() {
       doc.write(reply)
       doc.close()
 
-      const downloadbtn = document.getElementById('downloadbtn')
+      const a = document.getElementById('downloadbtn')
       let blob = new Blob([ result ], {type: "text/html"})
       let href = URL.createObjectURL(blob)
-      downloadbtn.onclick = function() {
+      a.onclick = function() {
         Object.assign(this, {
           href,
           download: "website.html"
