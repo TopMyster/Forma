@@ -2,6 +2,7 @@ async function submition() {
   let result
   document.getElementById('loading').style.display = 'flex'
   let transcript = document.getElementById('usertext').value
+  const a = document.getElementById('downloadbtn')
 
   try {
     const response = await fetch("/api/chat", { 
@@ -54,4 +55,15 @@ async function submition() {
 
 function newChat() {
   document.getElementById('result').style.display = 'none'
+}
+
+function download() {
+  let blob = new Blob([ result ], {type: text/html})
+  let href = URL.createObjectURL(blob)
+  a.onclick = function() {
+    Object.assign(this, {
+        href,
+        download: "website.html"
+    })
+  }
 }
