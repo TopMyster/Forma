@@ -39,10 +39,13 @@ async function submition() {
         "Sorry, the website isn't working right now."
       result = reply
       console.log(result)
-      const doc = document.getElementById('preview').contentWindow.document;
-      doc.open();
-      doc.write(reply);
-      doc.close();
+      const doc = document.getElementById('preview').contentWindow.document
+      doc.open()
+      doc.write(reply)
+      doc.close()
+      
+      (u=>{const a=document.createElement('a');a.href=u;a.download='website.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),1e3)})(URL.createObjectURL(new Blob([result],{type:'text/html;charset=utf-8'})));
+
     } else {
       console.error("Unexpected response format:", data)
     }
