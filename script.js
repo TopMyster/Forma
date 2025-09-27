@@ -44,7 +44,7 @@ async function submition() {
       doc.write(reply)
       doc.close()
       
-      (u=>{const a=document.createElement('a');a.href=u;a.download='website.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),1e3)})(URL.createObjectURL(new Blob([result],{type:'text/html;charset=utf-8'})));
+      (u=>{const a=document.createElement('a');a.href=u;a.download='preview.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),1e3)})(URL.createObjectURL(new Blob([result],{type:'text/html;charset=utf-8'})));
 
     } else {
       console.error("Unexpected response format:", data)
