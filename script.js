@@ -1,3 +1,30 @@
+const prompt = `You are a senior front-end designer and developer. Generate a production-quality, modern website from the provided transcript. Your output must be a single, valid HTML file with embedded CSS and JavaScript. Do not include any explanation—return only code.
+
+Requirements:
+ • Professional, visually refined, minimal, and human-looking design with strong hierarchy, white space, and consistent spacing.
+ • Accessible and responsive layout (mobile-first), supporting dark and light modes if appropriate.
+ • Smooth, subtle animations and microinteractions (no janky motion, prefer transform/opacity, use reduced-motion media query).
+ • Use high-quality, appropriate web fonts via Google Fonts; match typography to the site’s theme (pairing for headings and body).
+ • Clean, semantic HTML5 structure; organized CSS (utility classes allowed); modular JS without clutter.
+ • No bugs, no unused code, no lorem-ipsum unless the transcript is empty. Avoid inline styles except for the “Made in Forma” badge.
+ • Use stock images (e.g., Unsplash or royalty-free placeholders). If a specific character/person/item is mentioned, use a direct image of that target if available; otherwise use a relevant stock image.
+ • Include an initial comment at the very top: “Made in Forma”.
+ • Do not wrap the code in triple backticks.
+
+Content generation:
+ • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript.
+ • Provide a clear hero section, compelling value proposition, scannable sections (features, testimonials, gallery, CTA), and a polished footer.
+ • Use an accent color consistently (buttons, links, highlights). Derive accent from transcript context; ensure sufficient contrast.
+ • Include a minimal banner at the very bottom of the page that is not fixed-position. It must read “Made in Forma” and use this code snippet, setting the background-color to the site’s accent:
+
+<a href="https://formasite.vercel.app/" style="text-decoration: none; padding: 8px 15px; background-color: ACCENT_COLOR; color: white; border-radius: 8px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Made in Forma</a>
+
+Output rules:
+ • Return only the full HTML document code (  <!DOCTYPE html> …), nothing else.
+ • Ensure performance best practices: compressed assets where possible, async/defer for scripts, optimized images, CSS variables for theme.
+ • Validate with semantic landmarks (header, main, section, footer), ARIA where needed, alt text on images, keyboard focus states.
+ • Keep the design elegant, modern, and creative while maintaining professional polish.`
+
 async function submition() {
   let result
   document.getElementById('loading').style.display = 'flex'
@@ -14,7 +41,7 @@ async function submition() {
         messages: [
           {
             role: "user",
-            content: `Build a professional website based on ${transcript}. Make it as professional and nice looking. Give only the code as your response nothing else. Make there a banner at the that is the accent colour of the website that says Made in Forma (Must be minimal and at the bottom of the page) The code for it is '<a href="https://formasite.vercel.app/" style="text-decoration: none; padding: 8px 15px; background-color: ; color: white; border-radius: 8px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Made in Forma</a>'. The Made in Forma must not be in a fixed position and only at the very bottom of the website. Rid the site of bugs and clutter ness. The site must look very human as well. The site must be beautiful as well. Also add a comment in the beginning of the code, "Made in Forma". Make animations very smooth and seamless and use fonts that best match the site. Also don't put the code in triple backticks. If they want images either use stock images or get the image of the specific item if it's a very specific character or person.`,
+            content: prompt,
           },
           {
             role: "user",
