@@ -13,6 +13,7 @@ body {
     align-items: center;
     line-height: .2;
     top: 35px;
+    animation: appear .5s forwards;
 
 }
 
@@ -52,12 +53,7 @@ body {
     transition: .4s;
 }
 
-#userinput button:hover {
-    scale: 1.05;
-    box-shadow: inset 5px -7px 4px 0 rgba(12, 12, 12, 0.25), 2px 2px 30px rgba(0, 0, 0, 0.106);
-}
-
-#userinput button:active {
+button:active {
     scale: .9;
 }
 
@@ -89,6 +85,7 @@ button {
     border: none;
     border-radius: 25px;
     font-size: 25px;
+    cursor: pointer;
     box-shadow: inset 5px -7px 4px 0 rgba(12, 12, 12, 0.25), 2px 2px 30px rgba(0, 0, 0, 0.027);
 }
 
@@ -103,6 +100,8 @@ button {
     z-index: 1000;
     flex-direction: column;
     align-items: center;
+    transition: .3s;
+    animation: open .2s forwards;
 }
 
 #loading h1 {
@@ -123,7 +122,8 @@ button {
     z-index: 1000;
     flex-direction: column;
     align-items: center;
-   
+    transition: .3s;
+    animation: open .2s forwards;
 }
 
 #result .text {
@@ -158,4 +158,26 @@ button {
     font-size: 25px;
     cursor: pointer;
     box-shadow: inset 5px -7px 4px 0 rgba(12, 12, 12, 0.25), 2px 2px 30px rgba(0, 0, 0, 0.027);
+}
+
+#downloadbtn:active {
+    scale: .9;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        scale: .5;
+    } 100% {
+        opacity: 1;
+        scale: 1;
+    }
 }
