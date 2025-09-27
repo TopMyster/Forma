@@ -192,11 +192,14 @@ button {
     0% {
         backdrop-filter: blur(35px);
         background-color: #b578fa19;
+        scale: 1.1;
     } 50% {
         backdrop-filter: blur(65px);
         background-color: #b578fa2e;
+        scale: 1;
     } 100% {
         backdrop-filter: blur(35px);
         background-color: #b578fa19;
+        scale: 1.1;
     }
 }
