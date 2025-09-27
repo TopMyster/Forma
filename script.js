@@ -16,9 +16,11 @@ Requirements:
  • Use stock images (e.g., Unsplash or royalty-free placeholders). If a specific character/person/item is mentioned, use a direct image of that target if available; otherwise use a relevant stock image.
  • Include a html comment at the very top: “Made in Forma”.
  • Do not wrap the code in triple backticks.
- • You may use APIs if neccessary (EXAMPLES: sending message forms; music player;)
+ • You may use APIs if neccessary (EXAMPLES: contact forms; music players;)
  • Every part of the website must actually work
  • Don't leave out anything and keep work clean looking
+ • If advanced JS is needed use it
+ • Don't leave images blank
 
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript if stated, otherwise use infrensing to deside those things based on the type of site and from users given description.
@@ -32,7 +34,7 @@ Output rules:
  • Ensure performance best practices: compressed assets where possible, async/defer for scripts, optimized images, CSS variables for theme.
  • Validate with semantic landmarks (header, main, section, footer), ARIA where needed, alt text on images, keyboard focus states.
  • Keep the design elegant, modern, and creative while maintaining polish.
- • Double check website has everything and is working.
+ • Double check website has everything and is working. Make sure paddings, gaps, and margins are good and sizes of buttons, inputs, and text.
  `
 
   try {
