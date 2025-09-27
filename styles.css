@@ -78,6 +78,11 @@ button:active {
     outline: none;
 }
 
+#userinput textarea::spelling-error {
+    color: rgb(169, 5, 5);
+    text-decoration: none;
+}
+
 button {
     color: white;
     font-family: "Instrument Serif", serif;

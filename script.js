@@ -3,10 +3,11 @@ async function submition() {
   document.getElementById('loading').style.display = 'flex'
   let transcript = document.getElementById('usertext').value
 
-  const prompt = `You are a senior front-end designer and developer. Generate a production-quality, modern website from the provided transcript. Your output must be a single, valid HTML file with embedded CSS and JavaScript. Do not include any explanation—return only code.
+  const prompt = `
+You are a senior front-end designer and developer. Generate a production-quality, modern website from the provided transcript. Your output must be a single, valid HTML file with embedded CSS and JavaScript. Do not include any explanation—return only code.
 
 Requirements:
- • Professional, visually refined, minimal, and human-looking design with strong hierarchy, white space, and consistent spacing.
+ • Professional, visually refined, and human-looking design with strong hierarchy, white space, and consistent spacing.
  • Accessible and responsive layout (mobile-first), supporting dark and light modes if appropriate.
  • Smooth animations, and microinteractions (no janky motion).
  • Use high-quality, appropriate web fonts via Google Fonts; match typography to the site’s theme (pairing for headings and body).
@@ -15,8 +16,9 @@ Requirements:
  • Use stock images (e.g., Unsplash or royalty-free placeholders). If a specific character/person/item is mentioned, use a direct image of that target if available; otherwise use a relevant stock image.
  • Include a html comment at the very top: “Made in Forma”.
  • Do not wrap the code in triple backticks.
- • You may use APIs if neccessary
+ • You may use APIs if neccessary (EXAMPLES: sending message forms; music player;)
  • Every part of the website must actually work
+ • Don't leave out anything and keep work clean looking
 
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript if stated, otherwise use infrensing to deside those things based on the type of site and from users given description.
@@ -29,8 +31,9 @@ Output rules:
  • Return only the full HTML document code (  <!DOCTYPE html> …), nothing else.
  • Ensure performance best practices: compressed assets where possible, async/defer for scripts, optimized images, CSS variables for theme.
  • Validate with semantic landmarks (header, main, section, footer), ARIA where needed, alt text on images, keyboard focus states.
- • Keep the design elegant, modern, and creative while maintaining polish.`
-
+ • Keep the design elegant, modern, and creative while maintaining polish.
+ • Double check website has everything and is working.
+ `
 
   try {
     const response = await fetch("/api/chat", { 
@@ -50,7 +53,7 @@ Output rules:
             content: transcript
           }
         ],
-        temperature: 0.9,
+        temperature: 1,
         max_tokens: 4000,
         top_p: 1,
         stream: false
