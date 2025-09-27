@@ -13,7 +13,7 @@ Requirements:
  • Clean, semantic HTML5 structure; organized CSS (utility classes allowed); modular JS without clutter.
  • No bugs, no unused code, no lorem-ipsum unless the transcript is empty. Avoid inline styles except for the “Made in Forma” badge.
  • Use stock images (e.g., Unsplash or royalty-free placeholders). If a specific character/person/item is mentioned, use a direct image of that target if available; otherwise use a relevant stock image.
- • Include an initial comment at the very top: “Made in Forma”.
+ • Include a html comment at the very top: “Made in Forma”.
  • Do not wrap the code in triple backticks.
  • You may use APIs if neccessary
 
