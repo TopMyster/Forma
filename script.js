@@ -43,6 +43,16 @@ async function submition() {
       doc.open()
       doc.write(reply)
       doc.close()
+
+      const a = document.getElementById('downloadbtn')
+      let blob = new Blob([ result ], {type: "text/html"})
+      let href = URL.createObjectURL(blob)
+      a.onclick = function() {
+        Object.assign(this, {
+          href,
+          download: "website.html"
+        })
+      }
     } else {
       console.error("Unexpected response format:", data)
     }
@@ -54,15 +64,4 @@ async function submition() {
 
 function newChat() {
   document.getElementById('result').style.display = 'none'
-}
-
-const data = result.outerHTML
-const a = document.getElementById('downloadbtn')
-let blob = new Blob([ data ], {type: "text/html"})
-let href = URL.createObjectURL(blob)
-a.onclick = function() {
-  Object.assign(this, {
-      href,
-      download: "website.html"
-  })
 }
