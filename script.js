@@ -1,4 +1,9 @@
-const prompt = `You are a senior front-end designer and developer. Generate a production-quality, modern website from the provided transcript. Your output must be a single, valid HTML file with embedded CSS and JavaScript. Do not include any explanation—return only code.
+async function submition() {
+  let result
+  document.getElementById('loading').style.display = 'flex'
+  let transcript = document.getElementById('usertext').value
+
+  const prompt = `You are a senior front-end designer and developer. Generate a production-quality, modern website from the provided transcript. Your output must be a single, valid HTML file with embedded CSS and JavaScript. Do not include any explanation—return only code.
 
 Requirements:
  • Professional, visually refined, minimal, and human-looking design with strong hierarchy, white space, and consistent spacing.
@@ -10,6 +15,7 @@ Requirements:
  • Use stock images (e.g., Unsplash or royalty-free placeholders). If a specific character/person/item is mentioned, use a direct image of that target if available; otherwise use a relevant stock image.
  • Include an initial comment at the very top: “Made in Forma”.
  • Do not wrap the code in triple backticks.
+ • You may use APIs if neccessary
 
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript.
@@ -25,10 +31,6 @@ Output rules:
  • Validate with semantic landmarks (header, main, section, footer), ARIA where needed, alt text on images, keyboard focus states.
  • Keep the design elegant, modern, and creative while maintaining professional polish.`
 
-async function submition() {
-  let result
-  document.getElementById('loading').style.display = 'flex'
-  let transcript = document.getElementById('usertext').value
 
   try {
     const response = await fetch("/api/chat", { 
