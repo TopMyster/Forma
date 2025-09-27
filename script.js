@@ -21,9 +21,9 @@ Requirements:
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript if stated, otherwise use infrensing to deside those things based on the type of site and from users given description.
  • Use an accent color consistently (buttons, links, highlights). Derive accent from transcript context; ensure sufficient contrast.
- • Include a minimal banner at the very bottom of the page that is not fixed-position. It must read “Made in Forma” and use this code snippet, setting the background-color to the site’s accent:
+ • Include a minimal banner at the very bottom of the page that is not fixed-position. It must read “Made in Forma” and use this code snippet, setting the background-color to the site’s accent and teh font on the banner should be Instrument Serif from Google fonts:
 
-<a href="https://formasite.vercel.app/" style="text-decoration: none; padding: 8px 15px; background-color: ACCENT_COLOR; color: white; border-radius: 8px; font-family: INSTRUMENTAL_FONT_THAT_YOU_GET_FROM_GOOGLE_FONTS">Made in Forma</a>
+<a href="https://formasite.vercel.app/" style="text-decoration: none; padding: 8px 15px; background-color: ACCENT_COLOR; color: white; border-radius: 8px; font-family: INSTRUMENT_SERIF_FONT">Made in Forma</a>
 
 Output rules:
  • Return only the full HTML document code (  <!DOCTYPE html> …), nothing else.
