@@ -14,9 +14,11 @@ async function submition() {
   * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
   * Use smooth, seamless animations and fonts that best match the overall style of the website.
   * Use stock images where appropriate. If the request is for a very specific character, person, or object, use a relevant image of that subject.
-  * Eliminate bugs, errors, and unnecessary clutter. Ensure the site feels natural and "human-made."
-  * Include a banner link at the **very bottom** of the page (not fixed) that uses the accent color of the site and reads **Made in Forma** It must also be in the Instrument Serif font.
+  * Eliminate bugs, errors, and unnecessary clutter."
+  * Include a banner link at the very bottom of the page (not fixed) that uses the accent color of the site and reads **Made in Forma** It must also be in the Instrument Serif font.
   * Make the website's UI Design look really nice
+  * Don't wrap the code in triple backticks
+  * If you need, use advanced Javascript
 
     * Banner code:
       <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
@@ -49,8 +51,8 @@ async function submition() {
             content: transcript
           }
         ],
-        temperature: 0.5,
-        max_tokens: 6000,
+        temperature: 0.6,
+        max_tokens: 10000,
         top_p: 1,
         stream: false
       }),
