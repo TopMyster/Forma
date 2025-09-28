@@ -5,32 +5,29 @@ async function submition() {
 
   const prompt = `
 
-  Objective & Output:
-You are a senior front‑end designer and developer. Generate a production‑quality, modern website from the provided transcript. Return only a single, valid HTML document with embedded CSS and JavaScript—no explanations and no markdown fences. Derive palette, typography, layout, and tone from the transcript (infer when unspecified). Load high‑quality Google Fonts with display=swap; pair a distinctive heading font with a clean sans for body; do not use Times New Roman. Implement smooth, tasteful animations and microinteractions that respect prefers‑reduced‑motion. Provide light/dark mode with automatic text color ensuring AA contrast. Add an HTML comment at the very top: “Made in Forma”. At the very bottom (not fixed), include this banner using the chosen accent color and Instrument Serif from Google Fonts:
-<a href="https://formasite.vercel.app/" style="text-decoration: none; padding: 8px 100vw; background-color: ACCENT_COLOR; color: white; border-radius: 8px; font-family: 'Instrument Serif', serif">Made in Forma</a>
+  Build a clean, professional website based on **${transcript}**.
 
-Design & Functional Standards:
-- Semantic HTML5 (header, nav, main, section, footer); logical heading hierarchy; mobile‑first responsive layout; consistent spacing via CSS variables and a clear scale. Strong visual hierarchy, balanced white space, consistent accent color applied to buttons/links/highlights with sufficient contrast. Smooth animations on hover/focus/entrance; no janky motion.
-- Components (all must work):
-  • Responsive, accessible navigation with a mobile menu (ARIA, keyboard navigable, visible focus states).
-  • One interactive module (tabs, accordion, or gallery) with progressive enhancement and ARIA.
-  • Theme toggle (light/dark) with localStorage persistence.
-  • Contact form with client‑side validation and submit handler; show success/error; if backend implied, use fetch to a placeholder endpoint.
-  • Images: never blank—use relevant Unsplash stock or specific target images when mentioned; set width/height, loading="lazy", decoding="async", and meaningful alt text.
-- Copy: Clear, human‑sounding; no lorem ipsum unless the transcript is empty (then create tasteful placeholder copy).
-- Sections: Hero, Services/What I Do, Portfolio/Showcase, About, Testimonials or Social Proof (if implied), Contact/CTA, Footer.
+  Requirements:
 
-Performance, Accessibility & Self‑Check (before returning):
-- Performance: Inline critical CSS; defer/async scripts; avoid blocking; optimize assets where possible; use prefers‑color‑scheme and data‑theme.
-- Accessibility: AA contrast (≥4.5:1 body; ≥3:1 large text), logical tab order, visible focus on interactive elements, descriptive alt text, helpful ARIA (aria‑expanded/controls where needed).
-- Validation checklist:
-  • Document starts with <!DOCTYPE html>, includes <html lang>, <meta charset>, viewport, and meta description.
-  • No unused CSS/JS; no console errors; no undefined variables.
-  • Buttons use <button> (not <div>); ARIA attributes correctly wired.
-  • Navigation works on mobile; interactive module functions; form validates and provides user feedback.
-  • “Made in Forma” top comment present and bottom banner uses the chosen ACCENT_COLOR and 'Instrument Serif'.
-Return the full HTML code only.
+  * Output **only the code** (no explanations or extra text).
+  * Add a comment at the very beginning of the code: "Made in Forma".
+  * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
+  * Use smooth, seamless animations and fonts that best match the overall style of the website.
+  * Use stock images where appropriate. If the request is for a very specific character, person, or object, use a relevant image of that subject.
+  * Eliminate bugs, errors, and unnecessary clutter. Ensure the site feels natural and "human-made."
+  * Include a banner link at the **very bottom** of the page (not fixed) that uses the accent color of the site and reads **Made in Forma** It must also be in the Instrument Serif font.
 
+    * Banner code:
+      <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
+
+  Goals:
+
+  * The website should look polished and professional.
+  * The design must be minimal, clean, and modern.
+  * All animations should feel smooth and natural.
+  * The final result should resemble the quality of a Senior-Fontend Engineer-built site, but without bugs or clunky structure.
+
+  
   `
 
   try {
