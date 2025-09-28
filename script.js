@@ -18,11 +18,13 @@ async function submition() {
   * Include a banner link at the very bottom of the page (not fixed) that uses the accent color of the site and reads **Made in Forma** It must also be in the Instrument Serif font.
   * Make the website's UI Design look really nice
   * Don't wrap the code in triple backticks
-  * If you need, use advanced Javascript 
-  * If they ask for a complex project make it and it has to work. You can use apis for them too .(Examples: A game; a text editor; A note taking website; A translating site)
+  * If you need, use very advanced Javascript to make the project work
+  * If they ask for a complex project make it and it has to work. You can use APIs for them too .(Examples: A game; a text editor; A note taking website; A translating site)
+  * Do exactly what the user asks and make it so whatever they ask works
   * Do not leave empty images at all they must have some sort of image there not just an alt
   * Check current website trends in platforms like Cosmos and Pinterest, make it modern, sleek and professional.
-  * All the website's features have to be fully functional
+  * All the website's features have to be fully functional and usable. No empty images and empty links
+  * Search https://codyhouse.co/ and https://shoelace.style/ and https://www.siteinspire.com/ for design and code inspiration for the website
 
     * Banner code:
       <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
