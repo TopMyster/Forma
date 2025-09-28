@@ -108,6 +108,7 @@ button {
     align-items: center;
     transition: .3s;
     animation: open .2s forwards, load 3s infinite;
+    cursor: default;
 }
 
 #loading h1 {

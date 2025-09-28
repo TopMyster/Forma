@@ -9,8 +9,8 @@ async function submition() {
 
   Requirements:
 
-  * Output **only the code** (no explanations or extra text).
-  * Add a comment at the very beginning of the code: "Made in Forma".
+  * Output only the code (no explanations or extra text).
+  * Add an html comment at the very beginning of the code: "Made in Forma".
   * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
   * Use smooth, seamless animations and fonts that best match the overall style of the website.
   * Use stock images where appropriate. If the request is for a very specific character, person, or object, use a relevant image of that subject.
@@ -19,6 +19,7 @@ async function submition() {
   * Make the website's UI Design look really nice
   * Don't wrap the code in triple backticks
   * If you need, use advanced Javascript
+  * Do not leave empty images at all
 
     * Banner code:
       <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
