@@ -20,6 +20,7 @@ async function submition() {
   * Don't wrap the code in triple backticks
   * If you need, use advanced Javascript
   * Do not leave empty images at all
+  * Check current website trends in platforms like Cosmos and Pinterest, make it modern, sleek and professional.
 
     * Banner code:
       <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
