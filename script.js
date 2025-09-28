@@ -19,9 +19,10 @@ async function submition() {
   * Make the website's UI Design look really nice
   * Don't wrap the code in triple backticks
   * If you need, use advanced Javascript 
-  * If they ask for a complex project do it (Examples: A game; a text editor; A note taking website; A translating site)
+  * If they ask for a complex project make it and it has to work. You can use apis for them too .(Examples: A game; a text editor; A note taking website; A translating site)
   * Do not leave empty images at all they must have some sort of image there not just an alt
   * Check current website trends in platforms like Cosmos and Pinterest, make it modern, sleek and professional.
+  * All the website's features have to be fully functional
 
     * Banner code:
       <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
@@ -32,6 +33,7 @@ async function submition() {
   * The design must be minimal, clean, and modern.
   * All animations should feel smooth and natural.
   * The final result should resemble the quality of a Senior-Fontend Engineer-built site, but without bugs or clunky structure.
+  * Double check the website doesn't have anything not styled and that doesn't meet the requirements
   `
 
   try {
@@ -52,7 +54,7 @@ async function submition() {
             content: transcript
           }
         ],
-        temperature: 0.6,
+        temperature: 0.5,
         max_tokens: 10000,
         top_p: 1,
         stream: false
