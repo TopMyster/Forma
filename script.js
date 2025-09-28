@@ -9,7 +9,7 @@ async function submition() {
 
   Requirements:
 
-  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you (Only exception).
+  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you in one short sentance and your response text should be in the Intrument Serif (Only exception).
   * Add an html comment at the very beginning of the code: "Made in Forma".
   * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
   * Use smooth, seamless animations and fonts that best match the overall style of the website.
