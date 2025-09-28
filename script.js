@@ -25,6 +25,7 @@ Requirements:
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript if stated, otherwise use infrensing to deside those things based on the type of site and from users given description.
  • Use an accent color consistently (buttons, links, highlights). Derive accent from transcript context; ensure sufficient contrast.
+ • Keep sites looking clean and professional and use a clean font
  • Include a minimal banner at the very bottom of the page that is not fixed-position. It must read “Made in Forma” and use this code snippet, setting the background-color to the site’s accent and teh font on the banner should be Instrument Serif from Google fonts:
 
 <a href="https://formasite.vercel.app/" style="text-decoration: none; padding: 8px 15px; background-color: ACCENT_COLOR; color: white; border-radius: 8px; font-family: INSTRUMENT_SERIF_FONT">Made in Forma</a>
@@ -35,7 +36,6 @@ Output rules:
  • Validate with semantic landmarks (header, main, section, footer), ARIA where needed, alt text on images, keyboard focus states.
  • Keep the design elegant, modern, and creative while maintaining polish.
  • Double check website has everything and is working. Make sure paddings, gaps, and margins are good and sizes of buttons, inputs, and text.
- • Keep sites looking clean and professional
  `
 
   try {
