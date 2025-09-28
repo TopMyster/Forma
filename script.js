@@ -9,7 +9,7 @@ async function submition() {
 
   Requirements:
   * Font must be based on what type of site it is and the theme of it but by default it should be the system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif.
-  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you in one short sentance in the Intrument Serif font (Only exception).
+  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you in one short sentance using the Intrument Serif font (Only exception).
   * Add an html comment at the very beginning of the code: "Made in Forma".
   * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
   * Use smooth, seamless animations and fonts that best match the overall style of the website.
@@ -18,8 +18,9 @@ async function submition() {
   * Include a banner link at the very bottom of the page (not fixed) that uses the accent color of the site and reads **Made in Forma** It must also be in the Instrument Serif font.
   * Make the website's UI Design look really nice
   * Don't wrap the code in triple backticks
-  * If you need, use advanced Javascript
-  * Do not leave empty images at all
+  * If you need, use advanced Javascript 
+  * If they ask for a complex project do it (Examples: A game; a text editor; A note taking website; A translating site)
+  * Do not leave empty images at all they must have some sort of image there not just an alt
   * Check current website trends in platforms like Cosmos and Pinterest, make it modern, sleek and professional.
 
     * Banner code:
