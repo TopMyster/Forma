@@ -5,11 +5,11 @@ async function submition() {
 
   const prompt = `
 
-  Build a clean, professional website based on **${transcript}**.
+  Build a clean, professional website based on ${transcript}.
 
   Requirements:
 
-  * Output only the code (no explanations or extra text).
+  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you (Only exception).
   * Add an html comment at the very beginning of the code: "Made in Forma".
   * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
   * Use smooth, seamless animations and fonts that best match the overall style of the website.
@@ -30,8 +30,6 @@ async function submition() {
   * The design must be minimal, clean, and modern.
   * All animations should feel smooth and natural.
   * The final result should resemble the quality of a Senior-Fontend Engineer-built site, but without bugs or clunky structure.
-
-  
   `
 
   try {
