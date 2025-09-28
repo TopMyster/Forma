@@ -8,8 +8,8 @@ async function submition() {
   Build a clean, professional website based on ${transcript}.
 
   Requirements:
-
-  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you in one short sentance and your response text should be in the Intrument Serif (Only exception).
+  * Font must be based on what type of site it is and the theme of it but by default it should be the system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif.
+  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you in one short sentance in the Intrument Serif font (Only exception).
   * Add an html comment at the very beginning of the code: "Made in Forma".
   * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
   * Use smooth, seamless animations and fonts that best match the overall style of the website.
