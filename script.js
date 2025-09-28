@@ -21,6 +21,7 @@ Requirements:
  • Don't leave out anything and keep work clean looking
  • If advanced JS is needed use it
  • Don't leave images blank
+ • Text must be legible and readable and dont use Times New Roman as a default font
 
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript if stated, otherwise use infrensing to deside those things based on the type of site and from users given description.
