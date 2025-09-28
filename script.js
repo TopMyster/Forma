@@ -36,6 +36,7 @@ async function submition() {
   * All animations should feel smooth and natural.
   * The final result should resemble the quality of a Senior-Fontend Engineer-built site, but without bugs or clunky structure.
   * Double check the website doesn't have anything not styled and that doesn't meet the requirements
+  * Make sure banner is at the bottom with the Instument Serif font
   `
 
   try {
