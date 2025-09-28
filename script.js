@@ -8,7 +8,7 @@ You are a senior front-end designer and developer. Generate a production-quality
 
 Requirements:
  • Professional, visually refined, and human-looking design with strong hierarchy, white space, and consistent spacing.
- • Accessible and responsive layout (mobile-first), supporting dark and light modes if appropriate.
+ • Accessible and responsive layout (mobile-first).
  • Smooth animations, and microinteractions (no janky motion).
  • Use high-quality, appropriate web fonts via Google Fonts; match typography to the site’s theme (pairing for headings and body).
  • Clean, semantic HTML5 structure; organized CSS (utility classes allowed); modular JS without clutter.
@@ -21,7 +21,8 @@ Requirements:
  • Don't leave out anything and keep work clean looking
  • If advanced JS is needed use it
  • Don't leave images blank
- • Text must be legible and readable and dont use Times New Roman as a default font
+ • Text must be legible and readable in dark and light mode and dont use Times New Roman as a default font.
+ • Make text color change based on if it is light or dark mode
 
 Content generation:
  • Build a complete site based on ${transcript}. Derive color palette, typography, layout sections, and tone from the transcript if stated, otherwise use infrensing to deside those things based on the type of site and from users given description.
