@@ -1,3 +1,42 @@
+import React from "react"
+import './App.css'
+
+export default function App() {
+  return (
+     <>
+     <div id="logo">
+        <h1 style={{ fontSize: 100, fontWeight: 100, fontStyle: 'italic' }}>Forma</h1>
+        <h1 style={{fontWeight: 200}}>Create a website for <u>YOU</u></h1>
+        <div id="gradient"></div>
+    </div>
+    <div id="userinput">
+        <textarea id="usertext" placeholder="Describe your website"></textarea>
+        <button onClick={submition}>Create</button>
+    </div>
+    <div id="loading">
+        <h1 id="loadtext">Creating...</h1>
+    </div>
+    <div id="result">
+        <iframe id="preview" src="preview.html"></iframe>
+        <div className="text">
+            <h1>One more step...</h1>
+            <ol>
+                <li>Download the index.html</li>
+                <li>Go to <u><a href="https://tiiny.host/host-html-file/">Tiiny</a></u></li>
+                <li>Upload the index.html of your project to Tiiny</li>
+                <li>Follow the instructions on the page</li>
+                <li>(Optional) Buy a domain and connect it to site</li>
+                <li>You're Done! 🎉</li>
+            </ol>
+        </div>
+        <a id="downloadbtn">Download</a>
+        <button style={{position: "fixed", bottom: 5, left: 5,}} onClick={newChat}>+ Regenerate</button>
+    </div>
+    <a style={{position: "absolute", left: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} href="https://github.com/TopMyster" target="_blank">©2025 TopMyster</a>
+     </>
+  )
+}
+
 async function submition() {
   let result
   document.getElementById('loading').style.display = 'flex'
@@ -5,7 +44,7 @@ async function submition() {
 
   const prompt = `
 
-  Build a clean, professional website based on ${transcript}.
+  Build a clean, professional website based on ${transcript} in one React file running in an html file using CDN + Babel.
 
   Requirements:
   * Font must be based on what type of site it is and the theme of it but by default it should be the system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif.

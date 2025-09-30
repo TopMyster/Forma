@@ -8,38 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="/src/assets/logo.png">
 </head>
-<body>
-    <div id="logo">
-        <i><h1 style="font-size: 100px; font-weight: 100;">Forma</h1></i>
-        <h1 style="font-weight: 200;">Create a website for <u>YOU</u></h1>
-        <div id="gradient"></div>
-    </div>
-    <div id="userinput">
-        <textarea id="usertext" placeholder="Describe your website"></textarea>
-        <button onclick="submition()">Create</button>
-    </div>
-    <div id="loading">
-        <h1 id="loadtext">Creating...</h1>
-    </div>
-    <div id="result">
-        <iframe id="preview" src="preview.html"></iframe>
-        <div class="text">
-            <h1>One more step...</h1>
-            <ol>
-                <li>Download the index.html</li>
-                <li>Go to <u><a href="https://tiiny.host/host-html-file/">Tiiny</a></u></li>
-                <li>Upload the index.html of your project to Tiiny</li>
-                <li>Follow the instructions on the page</li>
-                <li>(Optional) Buy a domain and connect it to site</li>
-                <li>You're Done! 🎉</li>
-            </ol>
-        </div>
-        <a id="downloadbtn">Download</a>
-        <button style="position: fixed; bottom: 5px; left: 5px;" onclick="newChat()">+ Regenerate</button>
-    </div>
-    <a style="position: absolute; left: 25px; bottom: 25px; font-size: 16px; color: black; text-decoration: none;" href="https://github.com/TopMyster" target="_blank">©2025 TopMyster</a>
-    <script src="script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
