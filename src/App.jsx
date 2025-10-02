@@ -63,15 +63,15 @@ async function submition() {
   * Do not leave empty images at all they must have some sort of image there not just an alt
   * Check current website trends in platforms like Cosmos and Pinterest, make it modern, sleek and professional.
   * All the website's features have to be fully functional and usable. No empty images and empty links
-  * Search https://codyhouse.co/ and https://shoelace.style/ and https://www.siteinspire.com/ for design and code inspiration for the website
+  * Search https://codyhouse.co/, https://shoelace.style/, and https://www.siteinspire.com/ for design and code inspiration for the website
 
     * Banner code:
       <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
 
   Goals:
 
-  * The website should look polished and professional.
-  * The design must be minimal, clean, and modern.
+  * The website should look polished and professional, as well as creative and beautiful.
+  * The design must be minimal, clean, and modern with smooth interactions.
   * All animations should feel smooth and natural.
   * The final result should resemble the quality of a Senior-Fontend Engineer-built site, but without bugs or clunky structure.
   * Double check the website doesn't have anything not styled and that doesn't meet the requirements
@@ -97,7 +97,7 @@ async function submition() {
           }
         ],
         temperature: 0.6,
-        max_tokens: 11000,
+        max_tokens: 10000,
         top_p: 0.9,
         stream: false
       }),
