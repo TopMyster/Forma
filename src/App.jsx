@@ -17,7 +17,7 @@ export default function App() {
         <h1 id="loadtext">Creating...</h1>
     </div>
     <div id="result">
-        <iframe id="preview" src="preview.html"></iframe>
+        <iframe id="preview" src="./src/preview.html"></iframe>
         <div className="text">
             <h1>One more step...</h1>
             <ol>
@@ -113,7 +113,6 @@ async function submition() {
         data.choices[0].text?.content ||
         "Sorry, the website isn't working right now."
       result = reply
-      console.log(result)
       const doc = document.getElementById('preview').contentWindow.document
       doc.open()
       doc.write(reply)
