@@ -17,7 +17,7 @@ export default function App() {
         <h1 id="loadtext">Creating...</h1>
     </div>
     <div id="result">
-        <iframe id="preview" src="./src/preview.html"></iframe>
+        <iframe id="preview"></iframe>
         <div className="text">
             <h1>One more step...</h1>
             <ol>
