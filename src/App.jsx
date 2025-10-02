@@ -85,7 +85,7 @@ async function submition() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "gemma2-9b-it",
+        model: "meta-llama/llama-guard-4-12b",
         messages: [
           {
             role: "user",
@@ -97,7 +97,7 @@ async function submition() {
           }
         ],
         temperature: 0.5,
-        max_tokens: 8000,
+        max_tokens: 10000,
         top_p: 1,
         stream: false
       }),
