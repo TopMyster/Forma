@@ -96,9 +96,9 @@ async function submition() {
             content: transcript
           }
         ],
-        temperature: 0.4,
-        max_tokens: 10000,
-        top_p: 1,
+        temperature: 0.6,
+        max_tokens: 11000,
+        top_p: 0.9,
         stream: false
       }),
     });
