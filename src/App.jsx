@@ -85,7 +85,7 @@ async function submition() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "meta-llama/llama-guard-4-12b",
+        model: "http://openai/gpt-oss-120b",
         messages: [
           {
             role: "user",
@@ -96,7 +96,7 @@ async function submition() {
             content: transcript
           }
         ],
-        temperature: 0.5,
+        temperature: 0.4,
         max_tokens: 10000,
         top_p: 1,
         stream: false
