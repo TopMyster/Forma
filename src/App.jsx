@@ -85,7 +85,7 @@ async function submition() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "http://openai/gpt-oss-120b",
+        model: "openai/gpt-oss-120b",
         messages: [
           {
             role: "user",
