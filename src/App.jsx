@@ -43,39 +43,58 @@ async function submition() {
   let transcript = document.getElementById('usertext').value
 
   const prompt = `
+    You are a Senior Frontend Engineer + Senior UX/UI Designer.
 
-  Build a clean, professional website based on ${transcript} in one React file running in an html file using CDN + Babel.
-
-  Requirements:
-  * Font must be based on what type of site it is and the theme of it but by default it should be the system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif.
-  * Output only the code (no explanations or extra text) only.  If the user doesnt have enough info tell them what they need to tell you in one short sentance using the Intrument Serif font (Only exception).
-  * Add an html comment at the very beginning of the code: "Made in Forma".
-  * The site must be visually appealing, professional, and easy to navigate (Senior UX Designer quality).
-  * Use smooth, seamless animations and fonts that best match the overall style of the website.
-  * Use stock images where appropriate. If the request is for a very specific character, person, or object, use a relevant image of that subject.
-  * Eliminate bugs, errors, and unnecessary clutter."
-  * Include a banner link at the very bottom of the page (not fixed) that uses the accent color of the site and reads **Made in Forma** It must also be in the Instrument Serif font.
-  * Make the website's UI Design look really nice
-  * Don't wrap the code in triple backticks
-  * If you need, use very advanced Javascript to make the project work
-  * If they ask for a complex project make it and it has to work. You can use APIs for them too .(Examples: A game; a text editor; A note taking website; A translating site)
-  * Do exactly what the user asks and make it so whatever they ask works
-  * Do not leave empty images at all they must have some sort of image there not just an alt
-  * Check current website trends in platforms like Cosmos and Pinterest, make it modern, sleek and professional.
-  * All the website's features have to be fully functional and usable. No empty images and empty links
-  * Search https://codyhouse.co/, https://shoelace.style/, and https://www.siteinspire.com/ for design and code inspiration for the website
-
-    * Banner code:
-      <a href="https://formasite.vercel.app/" style="width: 100vw; box-sizing: border-box; text-decoration: none; padding: 12px 16px; background-color: blue; color: white; font-family: ; text-align: center; font-weight: 600; position: absolute; left: 0px">Made in Forma</a>
-
-  Goals:
-
-  * The website should look polished and professional, as well as creative and beautiful.
-  * The design must be minimal, clean, and modern with smooth interactions.
-  * All animations should feel smooth and natural.
-  * The final result should resemble the quality of a Senior-Fontend Engineer-built site, but without bugs or clunky structure.
-  * Double check the website doesn't have anything not styled and that doesn't meet the requirements
-  * Make sure banner is at the bottom with the Instument Serif font
+    Build a modern, clean, professional website based entirely on **${transcript}**.
+    
+    Hard Rules
+    - Output ONE self-contained HTML file
+    - Use React via CDN + Babel
+    - All React logic/components must be inside the HTML
+    - Output ONLY raw code (no explanations, no markdown, no backticks)
+    - Add this exact comment at the very top:
+    <!-- Made in Forma -->
+    
+    If information is missing
+    - Output one short sentence only
+    - Use the Instrument Serif font
+    - This is the only exception to the code-only rule
+    
+    Design & Quality
+    - Minimal, modern, polished, senior-level UI
+    - Excellent typography, spacing, hierarchy
+    - Smooth, natural animations only
+    - Font must match the site’s theme. Default fallback:
+    system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif
+    - Inspired by CodyHouse, Shoelace, SiteInspire, Cosmos, Pinterest
+    
+    Images
+    - Use high-quality stock images
+    - If a specific person/object is mentioned, use a relevant real image
+    - NO empty images, placeholders, or missing src
+    
+    Functionality
+    - Everything must fully work
+    - No fake buttons, empty links, or broken features
+    - If the request is complex (apps, games, editors, translators), build it fully
+    - Advanced JavaScript and APIs are allowed
+    
+    Mandatory Bottom Banner
+    - At the very bottom (not fixed)
+    - Text: Made in Forma
+    - Font: Instrument Serif
+    - Uses the site’s accent color
+    - Must use this base structure (styles may adapt):
+    <a href="https://formasite.vercel.app/" style="width:100vw; box-sizing:border-box; text-decoration:none; padding:12px 16px; background-color:blue; color:white; font-family:'Instrument Serif', serif; text-align:center; font-weight:600; position:absolute; left:0;">Made in Forma</a>
+    
+    Final Check
+    - No unstyled elements
+    - No bugs or console errors
+    - No empty content
+    - Everything meets the requirements exactly
+    - Result must feel production-ready and intentional
+    
+    Do exactly what the user asks.
   `
 
   try {
