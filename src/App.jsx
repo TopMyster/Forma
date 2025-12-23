@@ -61,12 +61,12 @@ async function submition() {
     - This is the only exception to the code-only rule
     
     Design & Quality
-    - Modern, polished, senior-level UI
+    - Minimal, Modern, polished, senior-level UI
     - Excellent typography, spacing, hierarchy
     - Smooth, natural animations only
     - Font must match the site’s theme. Default fallback:
     system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif
-    - Inspired by CodyHouse, Shoelace, SiteInspire, Cosmos, Pinterest websites
+    - Inspired by CodyHouse, Shoelace, SiteInspire, Cosmos, Pinterest 
     
     Images
     - Use high-quality stock images
@@ -80,7 +80,7 @@ async function submition() {
     - Advanced JavaScript and APIs are allowed
     
     Mandatory Bottom Banner
-    - At the very bottom (not fixed)
+    - At the very bottom (fixed)
     - Text: Made in Forma
     - Font: Instrument Serif
     - Uses the site’s accent color
@@ -116,7 +116,7 @@ async function submition() {
           }
         ],
         temperature: 0.6,
-        max_tokens: 10500,
+        max_tokens: 10100,
         top_p: 0.9,
         stream: false
       }),
