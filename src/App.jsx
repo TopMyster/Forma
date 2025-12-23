@@ -80,7 +80,7 @@ async function submition() {
     - Advanced JavaScript and APIs are allowed
     
     Mandatory Bottom Banner
-    - At the very bottom (fixed)
+    - At the very bottom (not fixed but is at the very bottom)
     - Text: Made in Forma
     - Font: Instrument Serif
     - Uses the site’s accent color
