@@ -61,12 +61,12 @@ async function submition() {
     - This is the only exception to the code-only rule
     
     Design & Quality
-    - Minimal, modern, polished, senior-level UI
+    - Modern, polished, senior-level UI
     - Excellent typography, spacing, hierarchy
     - Smooth, natural animations only
     - Font must match the site’s theme. Default fallback:
     system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif
-    - Inspired by CodyHouse, Shoelace, SiteInspire, Cosmos, Pinterest
+    - Inspired by CodyHouse, Shoelace, SiteInspire, Cosmos, Pinterest websites
     
     Images
     - Use high-quality stock images
@@ -85,7 +85,7 @@ async function submition() {
     - Font: Instrument Serif
     - Uses the site’s accent color
     - Must use this base structure (styles may adapt):
-    <a href="https://formasite.vercel.app/" style="width:100vw; box-sizing:border-box; text-decoration:none; padding:12px 16px; background-color:blue; color:white; font-family:'Instrument Serif', serif; text-align:center; font-weight:600; position:absolute; left:0;">Made in Forma</a>
+    <a href="https://formasite.vercel.app/" style="width:100vw; box-sizing:border-box; text-decoration:none; padding:12px 16px; background-color: (website's accent color); color: white (depends on website's accent color); font-family:'Instrument Serif', serif; text-align:center; font-weight: 600; position:absolute; left:0;">Made in Forma</a>
     
     Final Check
     - No unstyled elements
@@ -107,7 +107,7 @@ async function submition() {
         model: "openai/gpt-oss-120b",
         messages: [
           {
-            role: "user",
+            role: "system",
             content: prompt,
           },
           {
@@ -116,7 +116,7 @@ async function submition() {
           }
         ],
         temperature: 0.6,
-        max_tokens: 10000,
+        max_tokens: 10500,
         top_p: 0.9,
         stream: false
       }),
