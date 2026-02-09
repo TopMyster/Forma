@@ -13,7 +13,7 @@ export default function App() {
         <textarea id="usertext" placeholder="Describe your website"></textarea>
         <button onClick={submition}>Create</button>
     </div>
-    <a href="https://formasite.vercel.app/privacy.html" id="privacy-policy"><Privacy Policy</a>
+    <a href="https://formasite.vercel.app/privacy.html" id="privacy-policy">Privacy Policy</a>
     <div id="loading">
         <h1 id="loadtext">Creating...</h1>
     </div>
