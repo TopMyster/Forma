@@ -101,7 +101,7 @@ export default function App() {
         <button style={{position: "fixed", bottom: 5, left: 5,}} onClick={newChat}>+ Regenerate</button>
     </div>
     <a style={{position: "absolute", left: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} href="https://github.com/TopMyster" target="_blank">©2025 TopMyster</a>
-    <a style={{position: "absolute", right: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} onClick={{privacy()}} id="privacy-policy">Privacy Policy</a>
+    <a style={{position: "absolute", right: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} onClick={privacy} id="privacy-policy">Privacy Policy</a>
      </>
   )
 }
