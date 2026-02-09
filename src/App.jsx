@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState } from "react"
 
 function App() {
@@ -19,7 +18,7 @@ You are an AI site generator. Follow these rules strictly:
 - Everything meets the requirements exactly
 - Result must feel production-ready and intentional
 - Do exactly what the user asks.
-    `.trim()
+`.trim()
 
     try {
       setIsLoading(true)
@@ -94,7 +93,9 @@ You are an AI site generator. Follow these rules strictly:
             <main className="container">
               <header className="header">
                 <h1 className="title">Forma</h1>
-                <p className="subtitle">Describe your site, get a production-ready HTML file.</p>
+                <p className="subtitle">
+                  Describe your site, get a production-ready HTML file.
+                </p>
               </header>
 
               <form className="form" onSubmit={handleGenerate}>
@@ -182,57 +183,78 @@ You are an AI site generator. Follow these rules strictly:
               }}
             >
               <p>
-                Thank you for using [Your Company Name] (“we”, “us”, or “our”). We respect your
-                privacy. This Privacy Policy explains how we handle information when you use our AI
-                site generator and related services (the “Service”).
+                Thank you for using [Your Company Name] (“we”, “us”, or “our”). We
+                respect your privacy. This Privacy Policy explains how we handle
+                information when you use our AI site generator and related
+                services (the “Service”).
               </p>
 
               <p>By using our Service, you agree to this Privacy Policy.</p>
 
-              <hr style={{ borderColor: "rgba(55, 65, 81, 0.6)", margin: "1rem 0" }} />
+              <hr
+                style={{
+                  borderColor: "rgba(55, 65, 81, 0.6)",
+                  margin: "1rem 0",
+                }}
+              />
 
               <h2>1. Information We Collect</h2>
 
               <p>
-                We designed our Service so that we do <strong>not</strong> collect personal
-                information from you.
+                We designed our Service so that we do{" "}
+                <strong>not</strong> collect personal information from you.
               </p>
 
               <ul>
                 <li>We do not require you to create an account.</li>
                 <li>
-                  We do not store your prompts, website content, or files you enter into the Service.
+                  We do not store your prompts, website content, or files you
+                  enter into the Service.
                 </li>
-                <li>We do not track your activity across sites for advertising purposes.</li>
+                <li>
+                  We do not track your activity across sites for advertising
+                  purposes.
+                </li>
               </ul>
 
               <p>
-                Any information you enter is processed only to generate your site and is not stored
-                by us in a way that can identify you.
+                Any information you enter is processed only to generate your site
+                and is not stored by us in a way that can identify you.
               </p>
 
-              <hr style={{ borderColor: "rgba(55, 65, 81, 0.6)", margin: "1rem 0" }} />
+              <hr
+                style={{
+                  borderColor: "rgba(55, 65, 81, 0.6)",
+                  margin: "1rem 0",
+                }}
+              />
 
               <h2>2. Cookies and Tracking</h2>
 
               <p>
-                We do not use cookies or similar tracking technologies for analytics, advertising, or
-                profiling.
+                We do not use cookies or similar tracking technologies for
+                analytics, advertising, or profiling.
               </p>
 
               <p>
-                Our hosting provider or infrastructure services may automatically log basic technical
-                data (such as IP address and browser type) for security and operational reasons, but
-                we do not use this information to identify you or build a profile.
+                Our hosting provider or infrastructure services may
+                automatically log basic technical data (such as IP address and
+                browser type) for security and operational reasons, but we do
+                not use this information to identify you or build a profile.
               </p>
 
-              <hr style={{ borderColor: "rgba(55, 65, 81, 0.6)", margin: "1rem 0" }} />
+              <hr
+                style={{
+                  borderColor: "rgba(55, 65, 81, 0.6)",
+                  margin: "1rem 0",
+                }}
+              />
 
               <h2>3. How We Use Your Information</h2>
 
               <p>
-                Because we do not collect personal information, we only use temporary,
-                non-identifying data as needed to:
+                Because we do not collect personal information, we only use
+                temporary, non-identifying data as needed to:
               </p>
 
               <ul>
