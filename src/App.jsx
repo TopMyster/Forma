@@ -73,113 +73,106 @@ You are an AI site generator. Follow these rules strictly:
     setResult("")
   }
 
+  // just toggles privacy vs main, no style changes
   function privacy() {
     setShowPrivacy((prev) => !prev)
   }
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(135deg, #050816, #020617)",
-        color: "white",
-        fontFamily:
-          'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-      }}
-    >
+    <div>
       {!showPrivacy && (
         <>
-          <div id="app" className="app">
-            <main className="container">
-              <header className="header">
-                <h1 className="title">Forma</h1>
-                <p className="subtitle">
-                  Describe your site, get a production-ready HTML file.
-                </p>
-              </header>
-
-              <form className="form" onSubmit={handleGenerate}>
-                <textarea
-                  name="transcript"
-                  className="input"
-                  placeholder="Write a short description of the site you want. Include pages, sections, and any specific styles."
-                />
-                <button className="button" type="submit" disabled={isLoading}>
-                  {isLoading ? "Creating..." : "Generate site"}
-                </button>
-              </form>
-
-              <button className="secondary" type="button" onClick={privacy}>
-                Privacy Policy
-              </button>
-            </main>
+          <div id="logo">
+            <div id="gradient" />
+            <h1>Forma</h1>
+            <p>Describe your site, get a production-ready HTML file.</p>
           </div>
 
-          {isLoading && (
-            <div id="loading">
-              <h1 id="loadtext">Creating...</h1>
-            </div>
-          )}
+          <form id="userinput" onSubmit={handleGenerate}>
+            <textarea
+              id="usertext"
+              name="transcript"
+              placeholder="Write a short description of the site you want. Include pages, sections, and any specific styles."
+            />
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? "Creating..." : "Generate site"}
+            </button>
+          </form>
 
-          {showResult && (
-            <div id="result">
-              <iframe id="preview" title="preview" srcDoc={result} />
-              <div className="text">
-                <h1>One more step...</h1>
-                <ol>
-                  <li>Download the index.html</li>
-                  <li>
-                    Go to{" "}
-                    <u>
-                      <a
-                        href="https://tiiny.host/host-html-file/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Tiiny
-                      </a>
-                    </u>
-                  </li>
-                  <li>Upload the index.html of your project to Tiiny</li>
-                  <li>Follow the instructions on the page</li>
-                  <li>(Optional) Buy a domain and connect it to site</li>
-                  <li>You're Done! 🎉</li>
-                </ol>
-              </div>
-              <a
-                id="downloadbtn"
-                href={URL.createObjectURL(
-                  new Blob([result], { type: "text/html" })
-                )}
-                download="index.html"
-              >
-                Download
-              </a>
-              <button
-                style={{ position: "fixed", bottom: 5, left: 5 }}
-                onClick={newChat}
-              >
-                + Regenerate
-              </button>
+          <button type="button" onClick={privacy}>
+            Privacy Policy
+          </button>
+
+          <div id="loading">
+            <h1 id="loadtext">Creating...</h1>
+          </div>
+
+          <div id="result">
+            <iframe id="preview" title="preview" srcDoc={result} />
+            <div className="text">
+              <h1>One more step...</h1>
+              <ol>
+                <li>Download the index.html</li>
+                <li>
+                  Go to{" "}
+                  <u>
+                    <a
+                      href="https://tiiny.host/host-html-file/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Tiiny
+                    </a>
+                  </u>
+                </li>
+                <li>Upload the index.html of your project to Tiiny</li>
+                <li>Follow the instructions on the page</li>
+                <li>(Optional) Buy a domain and connect it to site</li>
+                <li>You're Done! 🎉</li>
+              </ol>
             </div>
-          )}
+            <a
+              id="downloadbtn"
+              href={URL.createObjectURL(
+                new Blob([result], { type: "text/html" })
+              )}
+              download="index.html"
+            >
+              Download
+            </a>
+            <button
+              style={{ position: "fixed", bottom: 5, left: 5 }}
+              type="button"
+              onClick={newChat}
+            >
+              + Regenerate
+            </button>
+          </div>
         </>
       )}
 
       {showPrivacy && (
-        <div id="privacy" className="app">
-          <main className="container">
-            <header className="header">
-              <h1 className="title">Privacy Policy</h1>
-              <p className="subtitle">Last updated: February 8, 2026</p>
-            </header>
+        <div id="privacy">
+          <div id="logo">
+            <div id="gradient" />
+            <h1>Privacy Policy</h1>
+            <p>Last updated: February 8, 2026</p>
+          </div>
 
-            <section
+          <div
+            id="userinput"
+            style={{
+              height: "auto",
+              padding: "24px 24px 32px 24px",
+              boxSizing: "border-box",
+            }}
+          >
+            <div
               style={{
-                backgroundColor: "rgba(15, 23, 42, 0.85)",
-                borderRadius: 16,
-                padding: "1.5rem",
-                border: "1px solid rgba(148, 163, 184, 0.35)",
+                width: "100%",
+                height: "100%",
+                overflowY: "auto",
+                fontSize: "18px",
               }}
             >
               <p>
@@ -191,18 +184,13 @@ You are an AI site generator. Follow these rules strictly:
 
               <p>By using our Service, you agree to this Privacy Policy.</p>
 
-              <hr
-                style={{
-                  borderColor: "rgba(55, 65, 81, 0.6)",
-                  margin: "1rem 0",
-                }}
-              />
+              <hr />
 
               <h2>1. Information We Collect</h2>
 
               <p>
-                We designed our Service so that we do{" "}
-                <strong>not</strong> collect personal information from you.
+                We designed our Service so that we do <strong>not</strong>{" "}
+                collect personal information from you.
               </p>
 
               <ul>
@@ -222,12 +210,7 @@ You are an AI site generator. Follow these rules strictly:
                 and is not stored by us in a way that can identify you.
               </p>
 
-              <hr
-                style={{
-                  borderColor: "rgba(55, 65, 81, 0.6)",
-                  margin: "1rem 0",
-                }}
-              />
+              <hr />
 
               <h2>2. Cookies and Tracking</h2>
 
@@ -243,12 +226,7 @@ You are an AI site generator. Follow these rules strictly:
                 not use this information to identify you or build a profile.
               </p>
 
-              <hr
-                style={{
-                  borderColor: "rgba(55, 65, 81, 0.6)",
-                  margin: "1rem 0",
-                }}
-              />
+              <hr />
 
               <h2>3. How We Use Your Information</h2>
 
@@ -264,12 +242,12 @@ You are an AI site generator. Follow these rules strictly:
               </ul>
 
               <p>We do not sell, rent, or trade your information.</p>
-            </section>
+            </div>
 
-            <button className="secondary" type="button" onClick={privacy}>
+            <button type="button" onClick={privacy}>
               Back
             </button>
-          </main>
+          </div>
         </div>
       )}
     </div>
