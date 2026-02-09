@@ -4,6 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
 #logo {
@@ -35,7 +37,7 @@ body {
     align-items: center;
     top: 200px;
     background-color: #fffdf9;
-    box-shadow: 2px 2px 65px #c8a6f1a6, inset 0px 0px 12px #0e051938 ;
+    box-shadow: 2px 2px 65px #c8a6f1a6, inset 0px 0px 12px #0e051938;
     width: 500px;
     height: 250px;
     border-radius: 15px;
@@ -44,7 +46,7 @@ body {
 
 #userinput:hover {
     scale: 1.04;
-    box-shadow: 2px 2px 35px #c8a6f1a6, inset 0px 0px 12px #0e051938 ;
+    box-shadow: 2px 2px 35px #c8a6f1a6, inset 0px 0px 12px #0e051938;
 }
 
 #userinput button {
@@ -144,7 +146,7 @@ button {
 #preview {
     position: relative;
     top: 30px;
-    margin: 0 auto;        
+    margin: 0 auto;
     width: 90vw;
     height: 90vh;
     border-radius: 12px;
@@ -154,8 +156,8 @@ button {
 }
 
 #downloadbtn {
-    position: fixed; 
-    bottom: 5px; 
+    position: fixed;
+    bottom: 5px;
     right: 5px;
     color: white;
     font-family: "Instrument Serif", serif;
@@ -176,7 +178,9 @@ button {
 @keyframes open {
     0% {
         opacity: 0;
-    } 100% {
+    }
+
+    100% {
         opacity: 1;
     }
 }
@@ -185,7 +189,9 @@ button {
     0% {
         opacity: 0;
         scale: .5;
-    } 100% {
+    }
+
+    100% {
         opacity: 1;
         scale: 1;
     }
@@ -200,13 +206,153 @@ button {
         backdrop-filter: blur(35px);
         background-color: #b578fa19;
         scale: 1.1;
-    } 50% {
+    }
+
+    50% {
         backdrop-filter: blur(65px);
         background-color: #b578fa2e;
         scale: 1;
-    } 100% {
+    }
+
+    100% {
         backdrop-filter: blur(35px);
         background-color: #b578fa19;
         scale: 1.1;
+    }
+}
+
+#privacy {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fffdf9;
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+}
+
+#privacy main {
+    max-width: 800px;
+    width: 100%;
+}
+
+#privacy h1 {
+    font-size: 60px;
+}
+
+#close-privacy {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+}
+
+#footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+#footer a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #logo h1:first-child {
+        font-size: 60px !important;
+    }
+
+    #logo h1:nth-child(2) {
+        font-size: 24px !important;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    #userinput {
+        width: 90vw;
+        height: 300px;
+        top: 150px;
+    }
+
+    #userinput textarea {
+        width: 80vw;
+        height: 180px;
+        font-size: 20px;
+    }
+
+    #userinput button {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 15px;
+    }
+
+    #loading h1 {
+        font-size: 30px;
+    }
+
+    #preview {
+        width: 100vw;
+        height: 80vh;
+        top: 0;
+        border-radius: 0;
+    }
+
+    #downloadbtn {
+        bottom: 60px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+    }
+
+    #result button {
+        bottom: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    #privacy {
+        padding: 20px;
+    }
+
+    #privacy h1 {
+        font-size: 40px;
+    }
+
+    #footer {
+        position: fixed;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    body {
+        padding-bottom: 50px;
+        overflow-x: hidden;
     }
 }
