@@ -210,3 +210,10 @@ button {
         scale: 1.1;
     }
 }
+
+#privacy-policy {
+    position: absolute;
+    bottom: 3px;
+    transform: translate(-50%, 50%);
+    text-decoration: none;
+}
