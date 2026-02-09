@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useState } from "react"
 
 function App() {
@@ -78,95 +79,51 @@ You are an AI site generator. Follow these rules strictly:
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "#040404", color: "white" }}>
-      <button
-        type="button"
-        onClick={privacy}
-        style={{
-          position: "fixed",
-          top: 10,
-          right: 10,
-          zIndex: 50,
-          padding: "6px 10px",
-          fontSize: 12,
-          borderRadius: 6,
-          background: "#1f2937",
-          color: "white",
-          border: "1px solid #4b5563",
-          cursor: "pointer",
-        }}
-      >
-        {showPrivacy ? "Back to generator" : "Privacy Policy"}
-      </button>
-
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #050816, #020617)",
+        color: "white",
+        fontFamily:
+          'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      }}
+    >
       {!showPrivacy && (
         <>
-          <div id="app">
-            <main style={{ padding: 24, maxWidth: 800, margin: "0 auto" }}>
-              <h1 style={{ marginBottom: 16 }}>Forma – AI Site Generator</h1>
-              <form onSubmit={handleGenerate}>
+          <div id="app" className="app">
+            <main className="container">
+              <header className="header">
+                <h1 className="title">Forma</h1>
+                <p className="subtitle">Describe your site, get a production-ready HTML file.</p>
+              </header>
+
+              <form className="form" onSubmit={handleGenerate}>
                 <textarea
                   name="transcript"
-                  placeholder="Describe the site you want..."
-                  style={{
-                    width: "100%",
-                    minHeight: 120,
-                    marginBottom: 12,
-                    padding: 8,
-                    borderRadius: 6,
-                    border: "1px solid #374151",
-                    fontFamily: "inherit",
-                  }}
+                  className="input"
+                  placeholder="Write a short description of the site you want. Include pages, sections, and any specific styles."
                 />
-                <button
-                  type="submit"
-                  style={{
-                    padding: "8px 14px",
-                    borderRadius: 6,
-                    border: "none",
-                    background: "#10b981",
-                    color: "#020617",
-                    fontWeight: 600,
-                    cursor: "pointer",
-                  }}
-                >
-                  Generate Site
+                <button className="button" type="submit" disabled={isLoading}>
+                  {isLoading ? "Creating..." : "Generate site"}
                 </button>
               </form>
+
+              <button className="secondary" type="button" onClick={privacy}>
+                Privacy Policy
+              </button>
             </main>
           </div>
 
           {isLoading && (
-            <div id="loading" style={{ padding: 24, textAlign: "center" }}>
+            <div id="loading">
               <h1 id="loadtext">Creating...</h1>
             </div>
           )}
 
           {showResult && (
-            <div
-              id="result"
-              style={{
-                display: "flex",
-                gap: 16,
-                padding: 24,
-                alignItems: "flex-start",
-              }}
-            >
-              <iframe
-                id="preview"
-                title="Preview"
-                style={{
-                  flex: 1,
-                  border: "1px solid #4b5563",
-                  minHeight: "70vh",
-                  background: "white",
-                }}
-                srcDoc={result}
-              />
-              <div
-                className="text"
-                style={{ padding: 16, maxWidth: 400, background: "#020617" }}
-              >
+            <div id="result">
+              <iframe id="preview" title="preview" srcDoc={result} />
+              <div className="text">
                 <h1>One more step...</h1>
                 <ol>
                   <li>Download the index.html</li>
@@ -194,24 +151,11 @@ You are an AI site generator. Follow these rules strictly:
                   new Blob([result], { type: "text/html" })
                 )}
                 download="index.html"
-                style={{
-                  alignSelf: "flex-start",
-                  padding: "8px 12px",
-                  background: "#10b981",
-                  color: "black",
-                  textDecoration: "none",
-                  borderRadius: 6,
-                  fontWeight: 600,
-                }}
               >
                 Download
               </a>
               <button
-                style={{
-                  position: "fixed",
-                  bottom: 5,
-                  left: 5,
-                }}
+                style={{ position: "fixed", bottom: 5, left: 5 }}
                 onClick={newChat}
               >
                 + Regenerate
@@ -222,90 +166,87 @@ You are an AI site generator. Follow these rules strictly:
       )}
 
       {showPrivacy && (
-        <div
-          id="privacy"
-          style={{
-            maxWidth: 760,
-            margin: "0 auto",
-            padding: "2rem 1.5rem 3rem",
-            color: "#111827",
-            background: "#ffffff",
-            borderRadius: 8,
-          }}
-        >
-          <main>
-            <h1>Privacy Policy</h1>
-            <p style={{ fontSize: "0.95rem", color: "#6b7280" }}>
-              Last updated: February 8, 2026
-            </p>
+        <div id="privacy" className="app">
+          <main className="container">
+            <header className="header">
+              <h1 className="title">Privacy Policy</h1>
+              <p className="subtitle">Last updated: February 8, 2026</p>
+            </header>
 
-            <p>
-              Thank you for using [Your Company Name] (“we”, “us”, or “our”). We
-              respect your privacy. This Privacy Policy explains how we handle
-              information when you use our AI site generator and related
-              services (the “Service”).
-            </p>
+            <section
+              style={{
+                backgroundColor: "rgba(15, 23, 42, 0.85)",
+                borderRadius: 16,
+                padding: "1.5rem",
+                border: "1px solid rgba(148, 163, 184, 0.35)",
+              }}
+            >
+              <p>
+                Thank you for using [Your Company Name] (“we”, “us”, or “our”). We respect your
+                privacy. This Privacy Policy explains how we handle information when you use our AI
+                site generator and related services (the “Service”).
+              </p>
 
-            <p>By using our Service, you agree to this Privacy Policy.</p>
+              <p>By using our Service, you agree to this Privacy Policy.</p>
 
-            <hr />
+              <hr style={{ borderColor: "rgba(55, 65, 81, 0.6)", margin: "1rem 0" }} />
 
-            <h2>1. Information We Collect</h2>
+              <h2>1. Information We Collect</h2>
 
-            <p>
-              We designed our Service so that we do{" "}
-              <strong>not</strong> collect personal information from you.
-            </p>
+              <p>
+                We designed our Service so that we do <strong>not</strong> collect personal
+                information from you.
+              </p>
 
-            <ul>
-              <li>We do not require you to create an account.</li>
-              <li>
-                We do not store your prompts, website content, or files you
-                enter into the Service.
-              </li>
-              <li>
-                We do not track your activity across sites for advertising
-                purposes.
-              </li>
-            </ul>
+              <ul>
+                <li>We do not require you to create an account.</li>
+                <li>
+                  We do not store your prompts, website content, or files you enter into the Service.
+                </li>
+                <li>We do not track your activity across sites for advertising purposes.</li>
+              </ul>
 
-            <p>
-              Any information you enter is processed only to generate your site
-              and is not stored by us in a way that can identify you.
-            </p>
+              <p>
+                Any information you enter is processed only to generate your site and is not stored
+                by us in a way that can identify you.
+              </p>
 
-            <hr />
+              <hr style={{ borderColor: "rgba(55, 65, 81, 0.6)", margin: "1rem 0" }} />
 
-            <h2>2. Cookies and Tracking</h2>
+              <h2>2. Cookies and Tracking</h2>
 
-            <p>
-              We do not use cookies or similar tracking technologies for
-              analytics, advertising, or profiling.
-            </p>
+              <p>
+                We do not use cookies or similar tracking technologies for analytics, advertising, or
+                profiling.
+              </p>
 
-            <p>
-              Our hosting provider or infrastructure services may automatically
-              log basic technical data (such as IP address and browser type) for
-              security and operational reasons, but we do not use this
-              information to identify you or build a profile.
-            </p>
+              <p>
+                Our hosting provider or infrastructure services may automatically log basic technical
+                data (such as IP address and browser type) for security and operational reasons, but
+                we do not use this information to identify you or build a profile.
+              </p>
 
-            <hr />
+              <hr style={{ borderColor: "rgba(55, 65, 81, 0.6)", margin: "1rem 0" }} />
 
-            <h2>3. How We Use Your Information</h2>
+              <h2>3. How We Use Your Information</h2>
 
-            <p>
-              Because we do not collect personal information, we only use
-              temporary, non-identifying data as needed to:
-            </p>
+              <p>
+                Because we do not collect personal information, we only use temporary,
+                non-identifying data as needed to:
+              </p>
 
-            <ul>
-              <li>Run the AI site generator and display results to you,</li>
-              <li>Maintain security and prevent abuse, and</li>
-              <li>Ensure the Service is functioning correctly.</li>
-            </ul>
+              <ul>
+                <li>Run the AI site generator and display results to you,</li>
+                <li>Maintain security and prevent abuse, and</li>
+                <li>Ensure the Service is functioning correctly.</li>
+              </ul>
 
-            <p>We do not sell, rent, or trade your information.</p>
+              <p>We do not sell, rent, or trade your information.</p>
+            </section>
+
+            <button className="secondary" type="button" onClick={privacy}>
+              Back
+            </button>
           </main>
         </div>
       )}
