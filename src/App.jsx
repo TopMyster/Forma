@@ -13,6 +13,74 @@ export default function App() {
         <textarea id="usertext" placeholder="Describe your website"></textarea>
         <button onClick={submition}>Create</button>
     </div>
+    <div id="privacy">
+      <main>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: February 8, 2026</p>
+    
+        <p>
+          Thank you for using [Your Company Name] (“we”, “us”, or “our”). We respect your privacy.
+          This Privacy Policy explains how we handle information when you use our AI site generator
+          and related services (the “Service”).
+        </p>
+    
+        <p>
+          By using our Service, you agree to this Privacy Policy.
+        </p>
+    
+        <hr />
+    
+        <h2>1. Information We Collect</h2>
+    
+        <p>
+          We designed our Service so that we do <strong>not</strong> collect personal information from you.
+        </p>
+    
+        <ul>
+          <li>We do not require you to create an account.</li>
+          <li>We do not store your prompts, website content, or files you enter into the Service.</li>
+          <li>We do not track your activity across sites for advertising purposes.</li>
+        </ul>
+    
+        <p>
+          Any information you enter is processed only to generate your site and is not stored by us in a
+          way that can identify you.
+        </p>
+    
+        <hr />
+    
+        <h2>2. Cookies and Tracking</h2>
+    
+        <p>
+          We do not use cookies or similar tracking technologies for analytics, advertising, or profiling.
+        </p>
+    
+        <p>
+          Our hosting provider or infrastructure services may automatically log basic technical data
+          (such as IP address and browser type) for security and operational reasons, but we do not use
+          this information to identify you or build a profile.
+        </p>
+    
+        <hr />
+    
+        <h2>3. How We Use Your Information</h2>
+    
+        <p>
+          Because we do not collect personal information, we only use temporary, non-identifying data as
+          needed to:
+        </p>
+    
+        <ul>
+          <li>Run the AI site generator and display results to you,</li>
+          <li>Maintain security and prevent abuse, and</li>
+          <li>Ensure the Service is functioning correctly.</li>
+        </ul>
+    
+        <p>
+          We do not sell, rent, or trade your information.
+        </p>
+      </main>
+    </div>
     <div id="loading">
         <h1 id="loadtext">Creating...</h1>
     </div>
@@ -33,7 +101,7 @@ export default function App() {
         <button style={{position: "fixed", bottom: 5, left: 5,}} onClick={newChat}>+ Regenerate</button>
     </div>
     <a style={{position: "absolute", left: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} href="https://github.com/TopMyster" target="_blank">©2025 TopMyster</a>
-    <a style={{position: "absolute", right: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} href="https://formasite.vercel.app/privacy.html" id="privacy-policy">Privacy Policy</a>
+    <a style={{position: "absolute", right: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} onClick={{privacy()}} id="privacy-policy">Privacy Policy</a>
      </>
   )
 }
@@ -158,4 +226,13 @@ async function submition() {
 
 function newChat() {
   document.getElementById('result').style.display = 'none'
+}
+
+function privacy() {
+    if (document.getElementById('privacy').style.display == 'none') {
+      document.getElementById('privacy').style.display == 'block'
+    } else {
+      document.getElementById('privacy').style.display == 'none'
+      
+    }
 }
