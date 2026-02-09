@@ -13,7 +13,6 @@ export default function App() {
         <textarea id="usertext" placeholder="Describe your website"></textarea>
         <button onClick={submition}>Create</button>
     </div>
-    <a href="https://formasite.vercel.app/privacy.html" id="privacy-policy">Privacy Policy</a>
     <div id="loading">
         <h1 id="loadtext">Creating...</h1>
     </div>
@@ -34,6 +33,7 @@ export default function App() {
         <button style={{position: "fixed", bottom: 5, left: 5,}} onClick={newChat}>+ Regenerate</button>
     </div>
     <a style={{position: "absolute", left: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} href="https://github.com/TopMyster" target="_blank">©2025 TopMyster</a>
+    <a style={{position: "absolute", right: 25, bottom: 25, fontSize: 16, color: "black", textDecoration: "none",}} href="https://formasite.vercel.app/privacy.html" id="privacy-policy">Privacy Policy</a>
      </>
   )
 }
