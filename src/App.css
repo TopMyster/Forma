@@ -6,6 +6,14 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    width: 100%;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #logo {
@@ -42,6 +50,7 @@ body {
     height: 250px;
     border-radius: 15px;
     transition: .43s;
+    margin-bottom: 250px;
 }
 
 #userinput:hover {
@@ -64,11 +73,10 @@ button:active {
     padding: 10px 10px;
     width: 435px;
     height: 143px;
-    position: absolute;
     background-color: transparent;
     border-radius: 5px;
     border-color: rgba(227, 227, 227, 0.835);
-    top: 18px;
+    margin-top: 18px;
     resize: none;
     transition: .2s;
     font-family: "Instrument Serif", serif;
@@ -258,10 +266,9 @@ button {
 }
 
 #footer {
-    position: fixed;
-    bottom: 25px;
-    left: 0;
-    right: 0;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -277,7 +284,104 @@ button {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+#landing-content {
+    max-width: 900px;
+    width: 100%;
+    margin-top: 150px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    color: #1a1a1a;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.content-card {
+    background: rgba(200, 166, 241, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(200, 166, 241, 0.2);
+}
+
+.content-card h2 {
+    font-size: 32px;
+    margin-top: 0;
+    font-weight: 200;
+}
+
+.detailed-section h2 {
+    font-size: 48px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.step-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #B478FA;
+    letter-spacing: 2px;
+}
+
+.step h3 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 200;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit h3 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.faq-section {
+    max-width: 700px;
+    margin: 0 auto 100px;
+    width: 100%;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
     #logo h1:first-child {
         font-size: 60px !important;
     }
@@ -342,10 +446,6 @@ button {
     }
 
     #footer {
-        position: fixed;
-        bottom: 15px;
-        left: 0;
-        right: 0;
         flex-direction: row;
         justify-content: space-between;
         padding: 0 15px;
@@ -354,5 +454,15 @@ button {
     body {
         padding-bottom: 50px;
         overflow-x: hidden;
+    }
+
+    .content-grid,
+    .steps,
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .detailed-section h2 {
+        font-size: 36px;
     }
 }
